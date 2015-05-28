@@ -1,9 +1,9 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path('../lib', __FILE__)
-require 'hookly-rails/version'
+require 'hookly/version'
 
 Gem::Specification.new do |s|
-  s.name        = 'hookly-rails'
+  s.name        = 'hookly'
   s.version     = Hookly::VERSION
   s.authors     = ['Brian Norton']
   s.email       = ['brian.nort@gmail.com']
@@ -17,6 +17,7 @@ Gem::Specification.new do |s|
   s.require_paths = ['lib']
 
   s.add_development_dependency 'rspec', '~> 3.2'
+  s.add_development_dependency 'webmock', '~> 1.21'
 
   s.add_dependency 'typhoeus', '~> 0.7'
 end
