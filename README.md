@@ -40,9 +40,9 @@ hookly.on('#updates', function(options) {
 });
 ```
 
-The push a new message the updates channel
+Push a new message the updates channel
 ```ruby
-Hookly::Channel.new('#updates').push(model: 'Message', id: 5, text: 'Thanks for the info.')
+Hookly::Message.create('#updates', model: 'Message', id: 5, text: 'Thanks for the info.')
  #=> #<Hookly::Message id: '44fjwq-djas' slug: '#updates', data: { model: 'Message', id: 5, text: 'Thanks for the info.' }>
 ```
 
@@ -60,7 +60,7 @@ hookly.on('#updates', function(options) {
 ```
 
 ```ruby
-Hookly::Channel.new('#updates', uid: '{{uid}}').push(model: 'Message', id: 6, text: 'Thanks for the PRIVATE info.')
+Hookly::Message.create('#updates', '{{uid}}', id: 6, text: 'Thanks for the PRIVATE info.')
  #=> #<Hookly::Message id: '44fjwq-djas' slug: '#updates', uid: '{{uid}}' data: { model: 'Message', id: 6, text: 'Thanks for the PRIVATE info.' }>
 ```
 
