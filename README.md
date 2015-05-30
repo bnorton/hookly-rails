@@ -1,5 +1,8 @@
 #hookly-rails
 
+[![Circle CI](https://circleci.com/gh/bnorton/hookly-rails.svg?style=svg)](https://circleci.com/gh/bnorton/hookly-rails)  
+[![Gem Version](https://badge.fury.io/rb/hookly.svg)](http://badge.fury.io/rb/hookly)
+
 1. Ruby wrapper for the Hookly API
 2. hookly.js asset pipeline provider/wrapper
 
