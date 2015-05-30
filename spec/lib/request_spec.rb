@@ -8,7 +8,7 @@ describe Hookly::Request do
     let(:run) { described_class.run(method, 'pathname', options, body) }
 
     let!(:request) { double(:request, :run => response) }
-    let!(:response) { double(:response, :success? => true, :response_body => { response: 'body' }.to_json, :response_code => 900) }
+    let!(:response) { double(:response, :success? => true, :response_body => { code: 10, message: { response: 'body' } }.to_json, :response_code => 900) }
 
     before do
       allow(Typhoeus::Request).to receive(:new).and_return(request)
