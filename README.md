@@ -16,7 +16,7 @@ Add to your Gemfile:
 ```ruby
 gem 'hookly-rails'
 ```
-
+s
 ###JS Setup
 Then add this to you application.js manifest:
 
@@ -38,7 +38,7 @@ Hookly.secret = '{{secret}}'
 
 In the client javascript subscribe to '#updates'
 ```javascript
-hookly.setup('{{token}}')
+hookly.start('{{token}}')
 hookly.on('#updates', function(options) {
   // options == { model: 'Message', id: 5, text: 'Thanks for the info.' }
 });
@@ -57,7 +57,7 @@ Have information that only a certain user should see??
 Include a unique user id on the client and server
 
 ```javascript
-hookly.setup('{{token}}', '{{uid}}')
+hookly.start('{{token}}', '{{uid}}')
 hookly.on('#updates', function(options) {
   // options == { model: 'Message', id: 6, text: 'Thanks for the PRIVATE info.' }
 });
